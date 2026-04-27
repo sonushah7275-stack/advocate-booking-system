@@ -1,0 +1,38 @@
+import { createContext, useState } from "react";
+
+// Create Context
+export const AppContext = createContext();
+
+const AppContextProvider = ({ children }) => {
+
+  // Backend API URL
+  const backendUrl = "http://localhost:5000";
+
+  // User Token
+  const [token, setToken] = useState("");
+
+  // User Data
+  const [userData, setUserData] = useState(null);
+
+  // Advocates Data
+  const [advocates, setAdvocates] = useState([]);
+
+  // Context Value
+  const value = {
+    backendUrl,
+    token,
+    setToken,
+    userData,
+    setUserData,
+    advocates,
+    setAdvocates,
+  };
+
+  return (
+    <AppContext.Provider value={value}>
+      {children}
+    </AppContext.Provider>
+  );
+};
+
+export default AppContextProvider;
