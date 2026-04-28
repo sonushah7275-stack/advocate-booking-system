@@ -8,7 +8,7 @@ const AppContextProvider = ({ children }) => {
   const currencySymbol = "₹";
 
   const backendURL =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+    import.meta.env.VITE_BACKEND_URL || "https://advocate-booking-system-backend.onrender.com";
 
   const [advocates, setAdvocates] = useState([]);
   const [token, setToken] = useState(localStorage.getItem("token") || false);
