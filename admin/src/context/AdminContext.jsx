@@ -6,7 +6,7 @@ export const AdminContext = createContext();
 
 const AdminContextProvider = ({ children }) => {
   const backendUrl =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+    import.meta.env.VITE_BACKEND_URL || "https://advocate-booking-system-backend.onrender.com";
 
   const [aToken, setAToken] = useState(
     localStorage.getItem("aToken") ? localStorage.getItem("aToken") : "",
