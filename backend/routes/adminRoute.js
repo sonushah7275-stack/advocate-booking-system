@@ -6,7 +6,7 @@ import {
   appointmentsAdmin,
   adminCancelAppointment,
   adminDashboard,
-} from "../controllers/admincontroller.js";
+} from "../controllers/adminController.js";
 import upload from "../middlewares/multer.js";
 import authAdmin from "../middlewares/authAdmin.js";
 import { changeAvailablity } from "../controllers/advocateController.js";
