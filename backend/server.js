@@ -31,8 +31,8 @@ const startServer = async () => {
   cors({
     origin: [
       
-      "https://advocate-booking-system-frontend.onrender.com/, // user frontend
-      "https://advocate-booking-system-admin.onrender.com/", // admin panel
+      "https://advocate-booking-system-frontend.onrender.com",
+      "https://advocate-booking-system-admin.onrender.com",
     ],
     credentials: true,
   })
