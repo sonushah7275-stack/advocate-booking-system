@@ -30,7 +30,7 @@ const startServer = async () => {
    app.use(
   cors({
     origin: [
-      "http://localhost:5173", // local development
+      
       "https://advocate-booking-system-frontend.onrender.com/, // user frontend
       "https://advocate-booking-system-admin.onrender.com/", // admin panel
     ],
