@@ -27,7 +27,16 @@ const startServer = async () => {
 
     // middlewares
     app.use(express.json());
-    app.use(cors());
+   app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // local development
+      "https://advocate-booking-system-frontend.onrender.com/, // user frontend
+      "https://advocate-booking-system-admin.onrender.com/", // admin panel
+    ],
+    credentials: true,
+  })
+);
 
     // routes
     app.use("/api/admin", adminRouter);
