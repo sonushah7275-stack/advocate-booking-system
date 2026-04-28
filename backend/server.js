@@ -36,7 +36,7 @@ const startServer = async () => {
     app.use("/api/user", userRouter);
 
     app.get("/", (req, res) => {
-      res.send("API WORKING");
+      res.send("API WORKING"); 
     });
 
     app.listen(port, () => {
